@@ -27,6 +27,10 @@ namespace Dog
             {
                 arrayOfDogs[i].HauHau();
             }
+
+            // 'please key to close' feature
+            Console.WriteLine("Press any key to close the window!!");
+            Console.ReadKey();
         }
     }
 
