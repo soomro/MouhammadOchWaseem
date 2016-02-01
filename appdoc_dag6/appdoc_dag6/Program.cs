@@ -10,8 +10,9 @@ namespace Dog
     {
         static void Main(string[] args)
         {
-            
-            Dog[] arrayOfDogs = new Dog[3];
+
+            int dogs_count = 4;
+            Dog[] arrayOfDogs = new Dog[dogs_count];
 
             Dog dog_sharo = new Dog("Sharo", "Shepherd", "happy");
             Dog dog_Rex = new Dog("Rex", "BMW");
