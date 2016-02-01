@@ -1,0 +1,2 @@
+# MouhammadOchWaseem
+MouhammadOchWaseem lexicon
