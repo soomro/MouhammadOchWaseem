@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace appdoc_dag6
+namespace Dog
 {
     class Program
     {
@@ -13,58 +13,92 @@ namespace appdoc_dag6
             
             Dog[] arrayOfDogs = new Dog[3];
 
-            Dog dog_sharo = new Dog("Sharo", "Shepherd");
+            Dog dog_sharo = new Dog("Sharo", "Shepherd", "happy");
             Dog dog_Rex = new Dog("Rex", "BMW");
             Dog dog3 = new Dog();
 
             arrayOfDogs[0] = dog_sharo;
-            arrayOfDogs[1] = new Dog("Rex", "BMW");
-            arrayOfDogs[2] = new Dog();
+            arrayOfDogs[1] = new Dog();
+            arrayOfDogs[2] = new Dog("Rex", "BMW");
+            arrayOfDogs[3] = new Dog("Rex", "BMW", "happy");
 
-            for(int i=0; i< arrayOfDogs.Length; i++)
+            for (int i=0; i< arrayOfDogs.Length; i++)
             {
                 arrayOfDogs[i].HauHau();
             }
-
         }
-
     }
 
     public class Dog
+    {
+    private string name;
+    private string breed;
+    private string mood; 
+
+    public Dog()
+    {
+        this.Name = "Balkan";
+        this.Breed = "Street excellent";
+        this.Mood = "happy";
+    }
+        
+    public Dog(string name, string breed)
+    {
+        this.Name = name;
+        this.Breed = breed;
+    }
+
+    public Dog(string name, string breed, string mood)
+    {
+        this.Name = name;
+        this.Breed = breed;
+        this.Mood = mood;
+    }
+
+    public string Mood
         {
-            private string name;
-            private string breed;
-
-            public Dog()
+            get
             {
-                this.name = "Balkan";
-                this.breed = "Street excellent";
-                            }
-
-            public Dog(string name, string breed)
-            {
-                this.name = name;
-                this.breed = breed;
-            }
-            public string Name
-            {
-                get { return name; }
-                set { name = value; }
-
+                return mood;
             }
 
-            public string Breed
+            set
             {
-                get { return breed; }
-                set { breed = value; }
+                mood = value;
+            }
+        }
 
+    public string Breed
+        {
+            get
+            {
+                return breed;
             }
 
-            public void HauHau()
+            set
             {
-                Console.WriteLine("{0} said: HAUUUUUUUUU" , name);
+                breed = value;
+            }
+        }
+
+    public string Name
+        {
+            get
+            {
+                return name;
+            }
+
+            set
+            {
+                name = value;
+            }
+        }
+
+    public void HauHau()
+            {
+                Console.WriteLine("{0} said: HAUUUUUUUUU" , Name);
              
             }
-        }  
+    }  
  
 }
